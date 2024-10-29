@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://cfgcd8vmx3w6"]
+
+[ext_resource type="Theme" uid="uid://c8kuyd28rejyl" path="res://Assets/main_theme.tres" id="1_8guqb"]
+[ext_resource type="PackedScene" uid="uid://bdiv1afd1j5cg" path="res://Stages/Level.tscn" id="2_ejlxc"]
+[ext_resource type="PackedScene" uid="uid://ccs3rjkmxhfpl" path="res://Entities/UI/ScorePanel/ScorePanel.tscn" id="2_pk5tx"]
+
+[node name="Game" type="Node"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme = ExtResource("1_8guqb")
+
+[node name="ScorePanel" parent="CanvasLayer/Control" instance=ExtResource("2_pk5tx")]
+layout_mode = 0
+
+[node name="Level" parent="." instance=ExtResource("2_ejlxc")]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+offset = Vector2(0, -32)
+anchor_mode = 0

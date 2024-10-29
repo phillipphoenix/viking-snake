@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://ccs3rjkmxhfpl"]
+
+[ext_resource type="Script" path="res://Entities/UI/ScorePanel/ScorePanel.gd" id="1_oaid0"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_vev25"]
+font_size = 8
+font_color = Color(0, 0, 0, 1)
+
+[node name="ScorePanel" type="PanelContainer" node_paths=PackedStringArray("_pillaged_value_text")]
+offset_right = 17.0
+offset_bottom = 22.0
+script = ExtResource("1_oaid0")
+_pillaged_value_text = NodePath("HBoxContainer/PillagedValue")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="PillagedLabel" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+text = "Pillaged:"
+label_settings = SubResource("LabelSettings_vev25")
+
+[node name="PillagedValue" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+text = "0
+"
+label_settings = SubResource("LabelSettings_vev25")

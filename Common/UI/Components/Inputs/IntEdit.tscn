@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://dwhnlsf6peqoq"]
+
+[ext_resource type="Script" path="res://Common/UI/Components/Inputs/IntEdit.gd" id="1_6yma2"]
+
+[node name="IntEdit" type="LineEdit"]
+placeholder_text = "Amount"
+script = ExtResource("1_6yma2")
+
+[connection signal="text_changed" from="." to="." method="_on_text_changed"]

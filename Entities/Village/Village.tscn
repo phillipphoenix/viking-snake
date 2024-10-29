@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://jfttriwrihoe"]
+
+[ext_resource type="Script" path="res://Entities/Village/Village.gd" id="1_e56bf"]
+[ext_resource type="Texture2D" uid="uid://dm6ofae4igxrk" path="res://Entities/Village/village.png" id="1_nunyq"]
+[ext_resource type="Texture2D" uid="uid://de1568rqll2qf" path="res://Entities/Village/village-ruins.png" id="3_sab60"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gi76u"]
+size = Vector2(14, 14)
+
+[node name="Village" type="Node2D" node_paths=PackedStringArray("_village_area", "_default_sprite", "_pillaged_sprite")]
+script = ExtResource("1_e56bf")
+_pillage_time_sec = 2.0
+_village_area = NodePath("Area2D")
+_default_sprite = NodePath("DefaultVillage")
+_pillaged_sprite = NodePath("PillagedVillage")
+
+[node name="DefaultVillage" type="Sprite2D" parent="."]
+texture = ExtResource("1_nunyq")
+
+[node name="PillagedVillage" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("3_sab60")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_gi76u")

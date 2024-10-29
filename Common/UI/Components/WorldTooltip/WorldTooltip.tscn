@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://w1uqa8irgmg6"]
+
+[ext_resource type="Theme" uid="uid://bd8vyp71wfats" path="res://Assets/Theme.tres" id="1_5dddc"]
+[ext_resource type="Script" path="res://Common/UI/Components/WorldTooltip/WorldTooltip.gd" id="2_3wgjw"]
+
+[node name="WorldTooltip" type="PanelContainer" node_paths=PackedStringArray("label")]
+visible = false
+offset_right = 132.0
+offset_bottom = 19.0
+theme = ExtResource("1_5dddc")
+theme_type_variation = &"UiBoxPanel"
+script = ExtResource("2_3wgjw")
+label = NodePath("MarginContainer/Label")
+text = "Hell"
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="Label" type="Label" parent="MarginContainer"]
+layout_mode = 2
+theme_type_variation = &"WorldTooltip"
+text = "Hell"
+vertical_alignment = 1
