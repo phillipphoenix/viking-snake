@@ -19,3 +19,8 @@ shape = SubResource("RectangleShape2D_52hwg")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_ecd2i")
+
+[node name="MoveTimer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="MoveTimer" to="." method="_on_move_timer_timeout"]

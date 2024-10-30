@@ -8,7 +8,9 @@ var _is_moving: bool = false
 var _target_pos: Vector2
 var _target_walking_speed: float = 1.0
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _ready() -> void:
+	GameManager.player = self
+
 func _process(delta: float) -> void:
 	if !can_move:
 		return

@@ -19,6 +19,7 @@ tile_set = ExtResource("1_ggf0l")
 position = Vector2(248, 248)
 ground_layer = NodePath("../GroundLayer")
 
-[node name="Villagers" type="Node" parent="."]
+[node name="Villagers" type="Node" parent="." node_paths=PackedStringArray("_base_layer")]
 script = ExtResource("3_2qhj6")
 _villager_scene = ExtResource("4_hlwgj")
+_base_layer = NodePath("../GroundLayer")
