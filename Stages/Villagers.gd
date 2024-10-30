@@ -15,4 +15,5 @@ func _on_village_pillaged(village: Village) -> void:
 	var villager_instance: Villager = _villager_scene.instantiate()
 	villager_instance.global_position = village.global_position
 	villager_instance.base_layer = _base_layer
+	GameSignalHub.villager_spawned.emit(villager_instance)
 	add_child(villager_instance)
