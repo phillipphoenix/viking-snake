@@ -60,7 +60,6 @@ func _on_move_timer_timeout() -> void:
 
 func follow(follow_to_pos: Vector2, walking_speed: float) -> void:
 	if is_head:
-		print("Head cannot follow.")
 		return
 
 	# If a villager is added to the tail,
@@ -82,7 +81,6 @@ func follow(follow_to_pos: Vector2, walking_speed: float) -> void:
 
 	# Make tail follow, if it exists.
 	if tail != null:
-		print("Make this tail's tail follow!")
 		tail.follow(prev_pos, prev_walking_speed)
 
 	GameSignalHub.villager_head_moved.emit()
@@ -99,9 +97,7 @@ func _physics_process(delta: float) -> void:
 
 func add_villager(villager: Villager) -> void:
 	if tail != null:
-		print("Villager has tail. Going to add new one to next villager.")
 		tail.add_villager(villager)
 	else:
 		tail = villager
 		villager.global_position = global_position
-		print("Villager added at the end.")
