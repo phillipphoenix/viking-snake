@@ -2,6 +2,7 @@ class_name Villager extends CharacterBody2D
 
 @export var _villager_sprites: Array[Texture2D] = []
 @export var _sprite: Sprite2D
+@export var visual_node: Node2D
 
 var base_layer: TileMapLayer
 
@@ -34,17 +35,24 @@ func _on_move_timer_timeout() -> void:
 	if !tile_data.get_custom_data("Walkable"):
 		return
 	
+	# When moving, only the visual layer is animated.
+	# We do this by moving the player, but setting the visual node back to the previous position
+	# and then animating it to the current one.
+	var prev_pos = global_position
+
 	_is_moving = true
 	_target_pos = base_layer.map_to_local(target_tile)
 	_target_walking_speed = tile_data.get_custom_data("WalkingSpeed")
+	global_position = _target_pos
+	visual_node.global_position = prev_pos
 	
 
 func _physics_process(delta: float) -> void:
 	if !_is_moving:
 		return
 		
-	if global_position == _target_pos:
+	if visual_node.global_position == _target_pos:
 		_is_moving = false
 		return
 	
-	global_position = global_position.move_toward(_target_pos, _target_walking_speed)
+	visual_node.global_position = visual_node.global_position.move_toward(_target_pos, _target_walking_speed)

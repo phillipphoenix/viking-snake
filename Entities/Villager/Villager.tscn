@@ -8,11 +8,12 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_52hwg"]
 size = Vector2(14, 14)
 
-[node name="Villager" type="CharacterBody2D" node_paths=PackedStringArray("_sprite")]
+[node name="Villager" type="CharacterBody2D" node_paths=PackedStringArray("_sprite", "visual_node")]
 motion_mode = 1
 script = ExtResource("1_ljsfy")
 _villager_sprites = Array[Texture2D]([ExtResource("2_ecd2i"), ExtResource("3_po02y"), ExtResource("4_pj6c8")])
 _sprite = NodePath("Sprite2D")
+visual_node = NodePath("Sprite2D")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_52hwg")
