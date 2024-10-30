@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=4 uid="uid://bdiv1afd1j5cg"]
+[gd_scene load_steps=5 format=4 uid="uid://bdiv1afd1j5cg"]
 
 [ext_resource type="TileSet" uid="uid://rgtwl0anjkml" path="res://Assets/map_tile_set.tres" id="1_ggf0l"]
 [ext_resource type="PackedScene" uid="uid://sk0bodl1byuc" path="res://Entities/Player/Player.tscn" id="2_ibl63"]
+[ext_resource type="Script" path="res://Stages/Villagers.gd" id="3_2qhj6"]
+[ext_resource type="PackedScene" uid="uid://x64uendinflf" path="res://Entities/Villager/Villager.tscn" id="4_hlwgj"]
 
 [node name="Level" type="Node2D"]
 
@@ -16,3 +18,7 @@ tile_set = ExtResource("1_ggf0l")
 [node name="Player" parent="." node_paths=PackedStringArray("ground_layer") instance=ExtResource("2_ibl63")]
 position = Vector2(248, 248)
 ground_layer = NodePath("../GroundLayer")
+
+[node name="Villagers" type="Node" parent="."]
+script = ExtResource("3_2qhj6")
+_villager_scene = ExtResource("4_hlwgj")

@@ -1,0 +1,21 @@
+[gd_scene load_steps=6 format=3 uid="uid://x64uendinflf"]
+
+[ext_resource type="Script" path="res://Entities/Villager/Villager.gd" id="1_ljsfy"]
+[ext_resource type="Texture2D" uid="uid://c2oywmglinknh" path="res://Entities/Villager/villager-1.png" id="2_ecd2i"]
+[ext_resource type="Texture2D" uid="uid://dphbx34tpn7dd" path="res://Entities/Villager/villager-2.png" id="3_po02y"]
+[ext_resource type="Texture2D" uid="uid://cislt40mpmk3t" path="res://Entities/Villager/villager-3.png" id="4_pj6c8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_52hwg"]
+size = Vector2(14, 14)
+
+[node name="Villager" type="CharacterBody2D" node_paths=PackedStringArray("_sprite")]
+motion_mode = 1
+script = ExtResource("1_ljsfy")
+_villager_sprites = Array[Texture2D]([ExtResource("2_ecd2i"), ExtResource("3_po02y"), ExtResource("4_pj6c8")])
+_sprite = NodePath("Sprite2D")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_52hwg")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_ecd2i")
