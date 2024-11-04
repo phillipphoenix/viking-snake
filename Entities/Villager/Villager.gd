@@ -23,9 +23,13 @@ func _on_move_timer_timeout() -> void:
 	if is_head == false:
 		return
 
-	var current_tile: Vector2i = base_layer.local_to_map(global_position)
+	# If the player is not set, the villager cannot move.
+	if GameManager.player == null:
+		return
+
+	var current_tile: Vector2i = GameManager.level.tile_map_local_to_map(global_position)
 	var player_pos = GameManager.player.global_position
-	var player_tile: Vector2i = base_layer.local_to_map(player_pos)
+	var player_tile: Vector2i = GameManager.level.tile_map_local_to_map(player_pos)
 	var path = GameManager.level.astar_grid.get_id_path(current_tile, player_tile)
 
 	# First tile in path is current tile.
@@ -35,11 +39,8 @@ func _on_move_timer_timeout() -> void:
 
 	var target_tile = path[1]
 
-	var tile_data: TileData = base_layer.get_cell_tile_data(target_tile)
-	if !tile_data:
-		return
-
-	if !tile_data.get_custom_data("Walkable"):
+	var is_walkable: bool = GameManager.level.get_tile_is_walkable(target_tile)
+	if !is_walkable:
 		return
 
 	# When moving, only the visual layer is animated.
@@ -49,8 +50,8 @@ func _on_move_timer_timeout() -> void:
 	var prev_walking_speed = _target_walking_speed
 
 	_is_moving = true
-	_target_pos = base_layer.map_to_local(target_tile)
-	_target_walking_speed = tile_data.get_custom_data("WalkingSpeed")
+	_target_pos = GameManager.level.tile_map_map_to_local(target_tile)
+	_target_walking_speed = GameManager.level.get_tile_walking_speed(target_tile)
 	global_position = _target_pos
 	visual_node.global_position = prev_pos
 
@@ -85,7 +86,7 @@ func follow(follow_to_pos: Vector2, walking_speed: float) -> void:
 
 	GameSignalHub.villager_head_moved.emit()
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	if !_is_moving:
 		return
 
