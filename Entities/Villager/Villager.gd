@@ -1,4 +1,4 @@
-class_name Villager extends CharacterBody2D
+class_name Villager extends Node2D
 
 @export var _villager_sprites: Array[Texture2D] = []
 @export var _sprite: Sprite2D
