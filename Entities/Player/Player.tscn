@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://sk0bodl1byuc"]
+[gd_scene load_steps=6 format=3 uid="uid://sk0bodl1byuc"]
 
 [ext_resource type="Script" path="res://Entities/Player/Player.gd" id="1_dmpcd"]
 [ext_resource type="Texture2D" uid="uid://bqw8yfnhdc14t" path="res://Entities/Player/viking.png" id="1_vnspk"]
 [ext_resource type="Script" path="res://Entities/Player/HP.gd" id="3_6cgao"]
+[ext_resource type="PackedScene" uid="uid://dxj37h1h68i7x" path="res://Entities/Player/DeadPlayer.tscn" id="4_iww32"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oanco"]
 size = Vector2(14, 14)
@@ -20,3 +21,4 @@ shape = SubResource("RectangleShape2D_oanco")
 
 [node name="Health" type="Node" parent="."]
 script = ExtResource("3_6cgao")
+death_scene = ExtResource("4_iww32")

@@ -28,6 +28,10 @@ window/size/window_width_override=1024
 window/size/window_height_override=1152
 window/stretch/mode="canvas_items"
 
+[global_group]
+
+DeadPlayerTarget="A target the dead player can be thrown at."
+
 [input]
 
 move_left={

@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" load_steps=13 format=3 uid="uid://rgtwl0anjkml"]
+[gd_resource type="TileSet" load_steps=14 format=3 uid="uid://rgtwl0anjkml"]
 
 [ext_resource type="Texture2D" uid="uid://c03fr4c0w1s2h" path="res://Assets/level_tilemap.png" id="1_6l3ak"]
 [ext_resource type="PackedScene" uid="uid://jfttriwrihoe" path="res://Entities/Village/Village.tscn" id="2_s6yta"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://be71nixg1gmws" path="res://Entities/DragonShip/DragonShip.tscn" id="3_rbn6h"]
 [ext_resource type="PackedScene" uid="uid://sk0bodl1byuc" path="res://Entities/Player/Player.tscn" id="4_0o2wy"]
 [ext_resource type="Texture2D" uid="uid://ckmubgop0qi7c" path="res://Assets/ocean_tile.png" id="4_j8btg"]
+[ext_resource type="PackedScene" uid="uid://p8dorajmek7c" path="res://Entities/Player/DeadPlayerTarget.tscn" id="5_m8tdn"]
 [ext_resource type="Texture2D" uid="uid://boymh3xdipfcs" path="res://Assets/forest_tile.png" id="7_k5do1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7yox6"]
@@ -199,6 +200,7 @@ separation = Vector2i(1, 1)
 scenes/1/scene = ExtResource("2_s6yta")
 scenes/2/scene = ExtResource("3_rbn6h")
 scenes/3/scene = ExtResource("4_0o2wy")
+scenes/4/scene = ExtResource("5_m8tdn")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_70lwt"]
 texture = ExtResource("3_oo7og")
