@@ -9,6 +9,7 @@ var _is_pillaged: bool = false
 
 func _ready() -> void:
 	_connect_signals()
+	GameManager.villages_total += 1
 	_default_sprite.visible = !_is_pillaged
 	_pillaged_sprite.visible = _is_pillaged
 

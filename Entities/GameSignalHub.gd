@@ -4,3 +4,7 @@ extends Node
 signal village_pillaged(village: Village)
 signal villager_spawned(villager: Villager)
 signal villager_head_moved()
+
+signal win_conditions_met()
+signal player_died()
+signal game_over()

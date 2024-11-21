@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://cc66pjvxovglm"]
+
+[ext_resource type="Script" path="res://Entities/WinConditionTarget/WinConditionTarget.gd" id="1_a6hy7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k7dfe"]
+size = Vector2(14, 14)
+
+[node name="WinConditionTarget" type="Marker2D" node_paths=PackedStringArray("_win_condition_area")]
+script = ExtResource("1_a6hy7")
+_win_condition_area = NodePath("Area2D")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_k7dfe")

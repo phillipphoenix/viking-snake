@@ -1,5 +1,6 @@
 extends Node
 
+var villages_total: int = 0
 var villages_burned: int = 0
 var level: Level
 var player: Player
@@ -11,6 +12,7 @@ func _ready() -> void:
 	reset()
 
 func reset() -> void:
+	villages_total = 0
 	villages_burned = 0
 
 func _connect_signals() -> void:
@@ -29,3 +31,6 @@ func _on_villager_spawned(villager: Villager) -> void:
 	
 	villager_tail.add_villager(villager)
 	villager_tail = villager
+
+func are_win_conditions_met() -> bool:
+	return villages_burned == villages_total

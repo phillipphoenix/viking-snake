@@ -10,6 +10,7 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	GameSignalHub.game_over.emit()
 	_deferred_ready.call_deferred()
 
 func _deferred_ready() -> void:
@@ -37,13 +38,13 @@ func _calculate_trajectory(target_position: Vector2) -> void:
 	var points: Array[Vector2] = []
 	var trajectory_curve = Curve2D.new()
 	
-	var dot = Vector2(1,0).dot((target_position - global_position).normalized())
+	var dot = Vector2(1, 0).dot((target_position - global_position).normalized())
 	var angle = 90 - 45 * dot
 
 	var dist_x := target_position.x - global_position.x
 	var dist_y := -1.0 * (target_position.y - global_position.y)
 	
-	var speed = sqrt(((0.5 * gravity * dist_x * dist_x) / pow(cos(deg_to_rad(angle)), 2.0)) / (dist_y -(tan(deg_to_rad(angle)) * dist_x)))
+	var speed = sqrt(((0.5 * gravity * dist_x * dist_x) / pow(cos(deg_to_rad(angle)), 2.0)) / (dist_y - (tan(deg_to_rad(angle)) * dist_x)))
 	var x_component = cos(deg_to_rad(angle)) * speed
 	var y_component = sin(deg_to_rad(angle)) * speed
 	
@@ -61,4 +62,5 @@ func _calculate_trajectory(target_position: Vector2) -> void:
 	path.curve = trajectory_curve
 
 func _on_throw_finished() -> void:
+	GameSignalHub.game_over.emit()
 	queue_free()
