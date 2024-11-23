@@ -19,4 +19,5 @@ axis_stretch_vertical = 2
 [resource]
 default_font = ExtResource("1_ep3vm")
 default_font_size = 12
+HeaderLarge/font_sizes/font_size = 28
 PanelContainer/styles/panel = SubResource("StyleBoxTexture_n2uq7")

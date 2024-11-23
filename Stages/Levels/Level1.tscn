@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=4 uid="uid://bdiv1afd1j5cg"]
 
 [ext_resource type="TileSet" uid="uid://rgtwl0anjkml" path="res://Assets/map_tile_set.tres" id="1_ggf0l"]
-[ext_resource type="Script" path="res://Stages/Level.gd" id="1_hwf2f"]
-[ext_resource type="Script" path="res://Stages/Villagers.gd" id="3_2qhj6"]
+[ext_resource type="Script" path="res://Stages/Levels/Level.gd" id="1_hwf2f"]
+[ext_resource type="Script" path="res://Entities/VillagersManager/Villagers.gd" id="3_2qhj6"]
 [ext_resource type="PackedScene" uid="uid://x64uendinflf" path="res://Entities/Villager/Villager.tscn" id="4_hlwgj"]
 
 [node name="Level" type="Node2D" node_paths=PackedStringArray("base_layer", "props_layer")]
@@ -16,7 +16,7 @@ tile_map_data = PackedByteArray("AAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAIAAAAAAAA
 tile_set = ExtResource("1_ggf0l")
 
 [node name="PropsLayer" type="TileMapLayer" parent="."]
-tile_map_data = PackedByteArray("AAAAAAMABAAAAAAAAAAFAAQABAAAAAAAAAABAAgABAAAAAAAAAAFAAoABAAAAAAAAAAAAA0ABAAAAAAAAAAIAA8ABAAAAAAAAAAKAAwABAAAAAAAAAAPAAwABAAAAAAAAAALAAgABAAAAAAAAAAOAAMABAAAAAAAAAAJAAIABAAAAAAAAAAGAAAABAAAAAAAAAA=")
+tile_map_data = PackedByteArray("AAAAAAMABAAAAAAAAAAFAAQABAAAAAAAAAABAAgABAAAAAAAAAAFAAoABAAAAAAAAAAAAA0ABAAAAAAAAAAIAA8ABAAAAAAAAAAKAAwABAAAAAAAAAAPAAwABAAAAAAAAAALAAgABAAAAAAAAAAOAAMABAAAAAAAAAAJAAIABAAAAAAAAAAGAAAABAAAAAAAAAAGAAwABQAAAAAAAAAJAAkABQAAAAAAAAAKAAgABQAAAAAAAAAJAAAABQAAAAAAAAAJAAEABQAAAAAAAAAKAAIABQAAAAAAAAADAAQABQAAAAAAAAAEAAUABQAAAAAAAAACAA8ABQAAAAAAAAADAA8ABQAAAAAAAAAAAAAABQAAAAAAAAAAAAEABQAAAAAAAAABAAAABQAAAAAAAAAQAA8ABQAAAAAAAAARAA8ABQAAAAAAAAAPAA8ABQAAAAAAAAACAAgABQAAAAAAAAADAAkABQAAAAAAAAAFAAkABQAAAAAAAAAGAAkABQAAAAAAAAAIAAkABQAAAAAAAAAAAAcABQAAAAAAAAAMAAgABQAAAAAAAAANAAkABQAAAAAAAAA=")
 tile_set = ExtResource("1_ggf0l")
 
 [node name="EntityLayer" type="TileMapLayer" parent="."]

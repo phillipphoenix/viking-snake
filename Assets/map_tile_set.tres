@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" load_steps=15 format=3 uid="uid://rgtwl0anjkml"]
+[gd_resource type="TileSet" load_steps=17 format=3 uid="uid://rgtwl0anjkml"]
 
 [ext_resource type="Texture2D" uid="uid://c03fr4c0w1s2h" path="res://Assets/level_tilemap.png" id="1_6l3ak"]
 [ext_resource type="PackedScene" uid="uid://jfttriwrihoe" path="res://Entities/Village/Village.tscn" id="2_s6yta"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://p8dorajmek7c" path="res://Entities/Player/DeadPlayerTarget.tscn" id="5_m8tdn"]
 [ext_resource type="PackedScene" uid="uid://cc66pjvxovglm" path="res://Entities/WinConditionTarget/WinConditionTarget.tscn" id="6_4cupd"]
 [ext_resource type="Texture2D" uid="uid://boymh3xdipfcs" path="res://Assets/forest_tile.png" id="7_k5do1"]
+[ext_resource type="Texture2D" uid="uid://df0uua5v50bc7" path="res://Assets/rock_tile.png" id="10_3csye"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7yox6"]
 texture = ExtResource("1_6l3ak")
@@ -244,6 +245,10 @@ texture = ExtResource("7_k5do1")
 0:0/0/custom_data_0 = true
 0:0/0/custom_data_1 = 0.5
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_y148m"]
+texture = ExtResource("10_3csye")
+0:0/0 = 0
+
 [resource]
 custom_data_layer_0/name = "Walkable"
 custom_data_layer_0/type = 1
@@ -256,3 +261,4 @@ sources/1 = SubResource("TileSetScenesCollectionSource_u5er3")
 sources/2 = SubResource("TileSetAtlasSource_70lwt")
 sources/3 = SubResource("TileSetAtlasSource_42prs")
 sources/4 = SubResource("TileSetAtlasSource_q5ws2")
+sources/5 = SubResource("TileSetAtlasSource_y148m")

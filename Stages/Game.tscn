@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://cfgcd8vmx3w6"]
 
 [ext_resource type="Theme" uid="uid://c8kuyd28rejyl" path="res://Assets/main_theme.tres" id="1_8guqb"]
-[ext_resource type="PackedScene" uid="uid://bdiv1afd1j5cg" path="res://Stages/Level.tscn" id="2_ejlxc"]
+[ext_resource type="PackedScene" uid="uid://bdiv1afd1j5cg" path="res://Stages/Levels/Level1.tscn" id="2_ejlxc"]
 [ext_resource type="PackedScene" uid="uid://ccs3rjkmxhfpl" path="res://Entities/UI/ScorePanel/ScorePanel.tscn" id="2_pk5tx"]
 
 [node name="Game" type="Node"]
