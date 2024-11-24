@@ -19,5 +19,9 @@ axis_stretch_vertical = 2
 [resource]
 default_font = ExtResource("1_ep3vm")
 default_font_size = 12
-HeaderLarge/font_sizes/font_size = 28
+Button/font_sizes/font_size = 16
+ButtonSmall/base_type = &"Button"
+ButtonSmall/font_sizes/font_size = 8
+HeaderLarge/font_sizes/font_size = 32
+Label/font_sizes/font_size = 16
 PanelContainer/styles/panel = SubResource("StyleBoxTexture_n2uq7")

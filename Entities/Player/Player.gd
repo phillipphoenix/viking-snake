@@ -10,8 +10,8 @@ var _target_pos: Vector2
 var _target_walking_speed: float = 1.0
 
 func _ready() -> void:
-	GameManager.player = self
-	_base_layer = GameManager.level.base_layer
+	GameManager.game.player = self
+	_base_layer = GameManager.game.level.base_layer
 
 func _process(_delta: float) -> void:
 	if !can_move:
@@ -30,21 +30,21 @@ func _process(_delta: float) -> void:
 		move(Vector2.RIGHT)
 
 func move(direction: Vector2) -> void:
-	var current_tile: Vector2i = GameManager.level.tile_map_local_to_map(global_position)
+	var current_tile: Vector2i = GameManager.game.level.tile_map_local_to_map(global_position)
 	var target_tile: Vector2i = Vector2i(
 		current_tile.x + direction.x,
 		current_tile.y + direction.y,
 	)
 
-	var is_walkable: bool = GameManager.level.get_tile_is_walkable(target_tile)
+	var is_walkable: bool = GameManager.game.level.get_tile_is_walkable(target_tile)
 	if !is_walkable:
 		return
 
 	var prev_pos = global_position
 
 	_is_moving = true
-	_target_pos = GameManager.level.tile_map_map_to_local(target_tile)
-	_target_walking_speed = GameManager.level.get_tile_walking_speed(target_tile)
+	_target_pos = GameManager.game.level.tile_map_map_to_local(target_tile)
+	_target_walking_speed = GameManager.game.level.get_tile_walking_speed(target_tile)
 	global_position = _target_pos
 	visual_node.global_position = prev_pos
 

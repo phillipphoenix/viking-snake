@@ -32,6 +32,10 @@ window/stretch/mode="canvas_items"
 
 DeadPlayerTarget="A target the dead player can be thrown at."
 
+[gui]
+
+theme/custom="res://Assets/main_theme.tres"
+
 [input]
 
 move_left={

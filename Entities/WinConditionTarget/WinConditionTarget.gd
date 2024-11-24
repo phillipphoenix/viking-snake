@@ -14,6 +14,6 @@ func _on_body_entered(body: Node2D) -> void:
 		_on_player_entered(body as Player)
 
 func _on_player_entered(_player: Player) -> void:
-	if GameManager.are_win_conditions_met():
+	if GameManager.game.are_win_conditions_met():
 		GameSignalHub.win_conditions_met.emit()
 		print_rich("Win conditions met! 🎉")

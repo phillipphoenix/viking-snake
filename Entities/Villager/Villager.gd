@@ -24,13 +24,13 @@ func _on_move_timer_timeout() -> void:
 		return
 
 	# If the player is not set, the villager cannot move.
-	if GameManager.player == null:
+	if GameManager.game.player == null:
 		return
 
-	var current_tile: Vector2i = GameManager.level.tile_map_local_to_map(global_position)
-	var player_pos = GameManager.player.global_position
-	var player_tile: Vector2i = GameManager.level.tile_map_local_to_map(player_pos)
-	var path = GameManager.level.astar_grid.get_id_path(current_tile, player_tile)
+	var current_tile: Vector2i = GameManager.game.level.tile_map_local_to_map(global_position)
+	var player_pos = GameManager.game.player.global_position
+	var player_tile: Vector2i = GameManager.game.level.tile_map_local_to_map(player_pos)
+	var path = GameManager.game.level.astar_grid.get_id_path(current_tile, player_tile)
 
 	# First tile in path is current tile.
 	# So if the path size is 1 or below, the villager is at target position.
@@ -39,7 +39,7 @@ func _on_move_timer_timeout() -> void:
 
 	var target_tile = path[1]
 
-	var is_walkable: bool = GameManager.level.get_tile_is_walkable(target_tile)
+	var is_walkable: bool = GameManager.game.level.get_tile_is_walkable(target_tile)
 	if !is_walkable:
 		return
 
@@ -50,8 +50,8 @@ func _on_move_timer_timeout() -> void:
 	var prev_walking_speed = _target_walking_speed
 
 	_is_moving = true
-	_target_pos = GameManager.level.tile_map_map_to_local(target_tile)
-	_target_walking_speed = GameManager.level.get_tile_walking_speed(target_tile)
+	_target_pos = GameManager.game.level.tile_map_map_to_local(target_tile)
+	_target_walking_speed = GameManager.game.level.get_tile_walking_speed(target_tile)
 	global_position = _target_pos
 	visual_node.global_position = prev_pos
 

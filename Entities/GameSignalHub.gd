@@ -1,5 +1,6 @@
 extends Node
 
+signal level_selected(level_meta: LevelMeta)
 
 signal village_pillaged(village: Village)
 signal villager_spawned(villager: Villager)

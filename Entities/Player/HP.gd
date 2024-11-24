@@ -10,5 +10,5 @@ func hit(attack_damage: int) -> void:
 		if death_scene != null:
 			var instance: Node2D = death_scene.instantiate()
 			instance.global_position = get_parent().global_position
-			GameManager.level.add_child(instance)
+			GameManager.game.level.add_child(instance)
 		get_parent().queue_free()

@@ -44,7 +44,7 @@ func _get_tile_data(tile_pos: Vector2i) -> TileData:
 	return null
 
 func _ready() -> void:
-	GameManager.level = self
+	GameManager.game.level = self
 	_create_astar_grid()
 	_connect_signals()
 
