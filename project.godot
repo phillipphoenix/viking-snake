@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="VikingSnake"
-run/main_scene="res://Stages/Game.tscn"
+run/main_scene="res://main_scene.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://Assets/icon.svg"
 
@@ -19,6 +19,7 @@ config/icon="res://Assets/icon.svg"
 
 GameSignalHub="*res://Entities/GameSignalHub.gd"
 GameManager="*res://Entities/GameManager/GameManager.tscn"
+Scenery="*res://addons/scenery/scenery.tscn"
 
 [display]
 
@@ -27,6 +28,10 @@ window/size/viewport_height=288
 window/size/window_width_override=1024
 window/size/window_height_override=1152
 window/stretch/mode="canvas_items"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/scenery/plugin.cfg")
 
 [global_group]
 

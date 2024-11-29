@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="SceneCategory" load_steps=2 format=3 uid="uid://dadeysofgm1tn"]
+
+[ext_resource type="Script" path="res://addons/scenery/tool/scene_category.gd" id="1_ep1n5"]
+
+[resource]
+script = ExtResource("1_ep1n5")
+name = ""

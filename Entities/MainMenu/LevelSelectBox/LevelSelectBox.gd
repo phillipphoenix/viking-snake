@@ -18,4 +18,5 @@ func _connect_signals() -> void:
 	level_select_button.pressed.connect(_on_level_select_button_pressed)
 
 func _on_level_select_button_pressed() -> void:
-	GameSignalHub.level_selected.emit(level_meta)
+	Scenery.switch_to("game", level_meta)
+	# GameSignalHub.level_selected.emit(level_meta)

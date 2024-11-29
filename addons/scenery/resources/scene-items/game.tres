@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="SceneItem" load_steps=4 format=3 uid="uid://clodjv6djkqbj"]
+
+[ext_resource type="Resource" uid="uid://dadeysofgm1tn" path="res://addons/scenery/resources/categories/game.tres" id="1_7ct7y"]
+[ext_resource type="Script" path="res://addons/scenery/tool/scene_item.gd" id="1_ww600"]
+[ext_resource type="PackedScene" uid="uid://cfgcd8vmx3w6" path="res://Stages/Game.tscn" id="2_3f1aw"]
+
+[resource]
+script = ExtResource("1_ww600")
+key = "game"
+scene = ExtResource("2_3f1aw")
+category = ExtResource("1_7ct7y")

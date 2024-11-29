@@ -7,7 +7,12 @@ var player: Player
 var villager_head: Villager
 var villager_tail: Villager
 
+func scenery_init(data) -> void:
+  var level_meta = data as LevelMeta
+  initialise(level_meta)
+
 func initialise(level_meta: LevelMeta) -> void:
+  GameManager.game = self
   level = level_meta.scene.instantiate()
   add_child(level)
 

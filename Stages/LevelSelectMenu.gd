@@ -1,7 +1,6 @@
 extends Control
 
 @export var back_button: Button
-@export var main_menu_stage: PackedScene
 
 @export var level_list: LevelList
 @export var level_select_box_scene: PackedScene
@@ -24,4 +23,4 @@ func _connect_signals() -> void:
 	back_button.pressed.connect(_on_back_button_pressed)
 
 func _on_back_button_pressed() -> void:
-	get_tree().change_scene_to_packed(main_menu_stage)
+	Scenery.switch_to("main_menu")

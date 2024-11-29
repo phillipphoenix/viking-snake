@@ -1,0 +1,25 @@
+[gd_scene load_steps=6 format=3 uid="uid://c4ljh02s6gwoh"]
+
+[ext_resource type="Script" path="res://addons/scenery/scenery.gd" id="1_sw0sn"]
+[ext_resource type="Script" path="res://addons/scenery/tool/scene_item.gd" id="2_wti3y"]
+[ext_resource type="Resource" uid="uid://ddwisfb68ncig" path="res://addons/scenery/resources/scene-items/main_menu.tres" id="3_ciair"]
+[ext_resource type="Resource" uid="uid://diihwgjs8dpvj" path="res://addons/scenery/resources/scene-items/level_select.tres" id="4_nmgor"]
+[ext_resource type="Resource" uid="uid://clodjv6djkqbj" path="res://addons/scenery/resources/scene-items/game.tres" id="5_t6ivs"]
+
+[node name="Scenery" type="Node" node_paths=PackedStringArray("_2d_scene_root", "_3d_scene_root", "_ui_scene_root")]
+script = ExtResource("1_sw0sn")
+_2d_scene_root = NodePath("2DScenes")
+_3d_scene_root = NodePath("3DScenes")
+_ui_scene_root = NodePath("UIScenes")
+_scene_items = Array[ExtResource("2_wti3y")]([ExtResource("3_ciair"), ExtResource("4_nmgor"), ExtResource("5_t6ivs")])
+_init_scene_key = "main_menu"
+
+[node name="2DScenes" type="Node2D" parent="."]
+
+[node name="3DScenes" type="Node3D" parent="."]
+
+[node name="UIScenes" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0

@@ -1,10 +1,9 @@
-[gd_scene load_steps=8 format=4 uid="uid://xf2l2fyx70rb"]
+[gd_scene load_steps=7 format=4 uid="uid://xf2l2fyx70rb"]
 
 [ext_resource type="TileSet" uid="uid://rgtwl0anjkml" path="res://Assets/map_tile_set.tres" id="1_x0pan"]
 [ext_resource type="Theme" uid="uid://c8kuyd28rejyl" path="res://Assets/main_theme.tres" id="2_gh12g"]
 [ext_resource type="PackedScene" uid="uid://dakabdsnsl4" path="res://Entities/MainMenu/LevelSelectBox/LevelSelectBox.tscn" id="3_jasps"]
 [ext_resource type="Script" path="res://Stages/LevelSelectMenu.gd" id="3_uy0j7"]
-[ext_resource type="PackedScene" uid="uid://jc78mtg3r5g3" path="res://Stages/MainMenu.tscn" id="4_8xshi"]
 [ext_resource type="Resource" uid="uid://bk45sma2jtb5k" path="res://Stages/LevelSelectList.tres" id="4_ykjlj"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hfts2"]
@@ -51,7 +50,6 @@ size_flags_vertical = 3
 theme = ExtResource("2_gh12g")
 script = ExtResource("3_uy0j7")
 back_button = NodePath("MenuMargins/VBoxContainer/backButton")
-main_menu_stage = ExtResource("4_8xshi")
 level_list = ExtResource("4_ykjlj")
 level_select_box_scene = ExtResource("3_jasps")
 level_select_box_container = NodePath("MenuMargins/VBoxContainer/MarginContainer/GridContainer")

@@ -1,9 +1,8 @@
-[gd_scene load_steps=6 format=4 uid="uid://jc78mtg3r5g3"]
+[gd_scene load_steps=5 format=4 uid="uid://jc78mtg3r5g3"]
 
 [ext_resource type="TileSet" uid="uid://rgtwl0anjkml" path="res://Assets/map_tile_set.tres" id="1_6qqqn"]
 [ext_resource type="Theme" uid="uid://c8kuyd28rejyl" path="res://Assets/main_theme.tres" id="2_ski53"]
 [ext_resource type="Script" path="res://Stages/MainMenu.gd" id="3_wkr2j"]
-[ext_resource type="PackedScene" uid="uid://xf2l2fyx70rb" path="res://Stages/LevelSelect.tscn" id="4_fjj3d"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hfts2"]
 bg_color = Color(0, 0, 0, 0.52549)
@@ -50,7 +49,6 @@ theme = ExtResource("2_ski53")
 script = ExtResource("3_wkr2j")
 _play_button = NodePath("MarginContainer/VBoxContainer/PlayButton")
 _quit_button = NodePath("MarginContainer/VBoxContainer/QuitButton")
-_level_select_stage = ExtResource("4_fjj3d")
 
 [node name="Title" type="Label" parent="CanvasLayer/Menu"]
 layout_mode = 1

@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="SceneItem" load_steps=4 format=3 uid="uid://ddwisfb68ncig"]
+
+[ext_resource type="Resource" uid="uid://bf4duas7leiy2" path="res://addons/scenery/resources/categories/main_menu.tres" id="1_u6drs"]
+[ext_resource type="PackedScene" uid="uid://jc78mtg3r5g3" path="res://Stages/MainMenu.tscn" id="2_2x4a6"]
+[ext_resource type="Script" path="res://addons/scenery/tool/scene_item.gd" id="3_7hfgl"]
+
+[resource]
+script = ExtResource("3_7hfgl")
+key = "main_menu"
+scene = ExtResource("2_2x4a6")
+category = ExtResource("1_u6drs")
+type = 2
