@@ -9,3 +9,4 @@ script = ExtResource("1_ww600")
 key = "game"
 scene = ExtResource("2_3f1aw")
 category = ExtResource("1_7ct7y")
+type = 0
