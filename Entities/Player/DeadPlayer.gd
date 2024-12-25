@@ -10,7 +10,6 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	GameSignalHub.game_over.emit()
 	_deferred_ready.call_deferred()
 
 func _deferred_ready() -> void:

@@ -45,5 +45,5 @@ func switch_to(scene_item_key: String, data = null) -> void:
 
 func _remove_all_children(node: Node) -> void:
   for child in node.get_children():
-    node.remove_child(child)
+    #node.remove_child(child)
     child.queue_free()
