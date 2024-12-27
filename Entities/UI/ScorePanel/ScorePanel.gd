@@ -6,7 +6,7 @@ func _ready() -> void:
 	_connect_signals()
 	
 func _connect_signals() -> void:
-	GameSignalHub.village_pillaged.connect(_on_village_pillaged)
+	GameSignalHub.update_score_ui.connect(_update_score_ui)
 	
-func _on_village_pillaged(_village: Village) -> void:
+func _update_score_ui() -> void:
 	_pillaged_value_text.text = str(GameManager.game.villages_burned)
