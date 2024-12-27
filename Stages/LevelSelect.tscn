@@ -91,6 +91,7 @@ theme_override_constants/margin_right = 20
 layout_mode = 2
 theme_override_constants/h_separation = 5
 theme_override_constants/v_separation = 5
+columns = 3
 
 [node name="LevelSelectBox" parent="CanvasLayer/LevelSelect/MenuMargins/VBoxContainer/MarginContainer/GridContainer" instance=ExtResource("3_jasps")]
 layout_mode = 2

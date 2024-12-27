@@ -1,9 +1,12 @@
-[gd_resource type="Resource" script_class="LevelList" load_steps=7 format=3 uid="uid://bk45sma2jtb5k"]
+[gd_resource type="Resource" script_class="LevelList" load_steps=13 format=3 uid="uid://bk45sma2jtb5k"]
 
 [ext_resource type="Script" path="res://Stages/Levels/LevelList.gd" id="1_0dp26"]
 [ext_resource type="Script" path="res://Stages/Levels/LevelMeta.gd" id="1_hsfu8"]
 [ext_resource type="PackedScene" uid="uid://bdiv1afd1j5cg" path="res://Stages/Levels/Level1.tscn" id="2_o16ne"]
 [ext_resource type="PackedScene" uid="uid://c5ig6r1266pnh" path="res://Stages/Levels/Level2.tscn" id="3_isnfi"]
+[ext_resource type="PackedScene" uid="uid://wm3s4edb7b3g" path="res://Stages/Levels/Level3.tscn" id="4_7o78y"]
+[ext_resource type="PackedScene" uid="uid://kj0kpy64c25d" path="res://Stages/Levels/Level4.tscn" id="5_6oy6f"]
+[ext_resource type="PackedScene" uid="uid://ddnjtjfqj1rkx" path="res://Stages/Levels/Level5.tscn" id="6_ihfjv"]
 
 [sub_resource type="Resource" id="Resource_m5wdf"]
 script = ExtResource("1_hsfu8")
@@ -17,6 +20,24 @@ id = "lvl1"
 name = "Level 2"
 scene = ExtResource("3_isnfi")
 
+[sub_resource type="Resource" id="Resource_fj2ww"]
+script = ExtResource("1_hsfu8")
+id = "lvl3"
+name = "Level 3"
+scene = ExtResource("4_7o78y")
+
+[sub_resource type="Resource" id="Resource_mqh51"]
+script = ExtResource("1_hsfu8")
+id = "lvl4"
+name = "Level 4"
+scene = ExtResource("5_6oy6f")
+
+[sub_resource type="Resource" id="Resource_acc24"]
+script = ExtResource("1_hsfu8")
+id = "lvl5"
+name = "Level 5"
+scene = ExtResource("6_ihfjv")
+
 [resource]
 script = ExtResource("1_0dp26")
-levels = Array[ExtResource("1_hsfu8")]([SubResource("Resource_m5wdf"), SubResource("Resource_eg1e0")])
+levels = Array[ExtResource("1_hsfu8")]([SubResource("Resource_m5wdf"), SubResource("Resource_eg1e0"), SubResource("Resource_fj2ww"), SubResource("Resource_mqh51"), SubResource("Resource_acc24")])
