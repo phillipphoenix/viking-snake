@@ -26,6 +26,8 @@ func _connect_signals() -> void:
 func _on_village_pillaged(_village: Village) -> void:
 	villages_burned += 1
 	GameSignalHub.update_score_ui.emit()
+	if are_win_conditions_met():
+		GameSignalHub.win_conditions_met.emit()
 
 func _on_villager_spawned(villager: Villager) -> void:
 	if villager_head == null:

@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://cc66pjvxovglm"]
+[gd_scene load_steps=4 format=3 uid="uid://cc66pjvxovglm"]
 
 [ext_resource type="Script" path="res://Entities/WinConditionTarget/WinConditionTarget.gd" id="1_a6hy7"]
+[ext_resource type="PackedScene" uid="uid://yjkdolh7x1yf" path="res://Entities/Marker/Marker.tscn" id="2_xhgh2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k7dfe"]
 size = Vector2(14, 14)
@@ -8,6 +9,7 @@ size = Vector2(14, 14)
 [node name="WinConditionTarget" type="Marker2D" node_paths=PackedStringArray("_win_condition_area")]
 script = ExtResource("1_a6hy7")
 _win_condition_area = NodePath("Area2D")
+_win_area_marker_scene = ExtResource("2_xhgh2")
 
 [node name="Area2D" type="Area2D" parent="."]
 

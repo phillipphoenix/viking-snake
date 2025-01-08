@@ -8,5 +8,6 @@ signal villager_head_moved()
 signal update_score_ui()
 
 signal win_conditions_met()
+signal player_won()
 signal player_died()
 signal game_over()
