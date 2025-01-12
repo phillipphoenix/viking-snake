@@ -12,6 +12,8 @@ env:
 jobs:
   export-windows:
     if: true
+    permissions:
+      contents: write
     name: Windows Export
     runs-on: ubuntu-20.04
     container:
@@ -59,6 +61,8 @@ jobs:
 
   export-linux:
     if: false
+    permissions:
+      contents: write
     name: Linux Export
     runs-on: ubuntu-20.04
     container:
@@ -104,6 +108,8 @@ jobs:
 
   export-web:
     if: false
+    permissions:
+      contents: write
     name: Web Export
     runs-on: ubuntu-20.04
     container:
@@ -161,6 +167,8 @@ jobs:
 
   export-mac:
     if: false # currently broken, see https://github.com/crystal-bit/godot-game-template/issues/82
+    permissions:
+      contents: write
     name: Mac Export
     runs-on: ubuntu-20.04
     container:
