@@ -20,5 +20,5 @@ mono_crash.*.json
 # VScode
 .vscode/
 
-# Exports
-exports
+# Builds
+builds
