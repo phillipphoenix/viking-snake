@@ -7,15 +7,11 @@ on:
 env:
   GODOT_VERSION: 4.3
   EXPORT_NAME: viking-snake
-  WINDOWS: true
-  LINUX: false
-  HTML: false
-  MAC: false
   ITCH_IO: true #set to true if you want to enable automatic itch.io deploy
 
 jobs:
   export-windows:
-    if: ${{ env.WINDOWS=='true' }}
+    if: true
     name: Windows Export
     runs-on: ubuntu-20.04
     container:
@@ -58,7 +54,7 @@ jobs:
           PACKAGE: build.zip
 
   export-linux:
-    if: ${{ env.LINUX=='true' }}
+    if: false
     name: Linux Export
     runs-on: ubuntu-20.04
     container:
@@ -101,7 +97,7 @@ jobs:
           PACKAGE: build.zip
 
   export-web:
-    if: ${{ env.HTML=='true' }}
+    if: false
     name: Web Export
     runs-on: ubuntu-20.04
     container:
@@ -156,7 +152,7 @@ jobs:
           PACKAGE: build.zip
 
   export-mac:
-    if: ${{ env.MAC=='true' }} # currently broken, see https://github.com/crystal-bit/godot-game-template/issues/82
+    if: false # currently broken, see https://github.com/crystal-bit/godot-game-template/issues/82
     name: Mac Export
     runs-on: ubuntu-20.04
     container:
