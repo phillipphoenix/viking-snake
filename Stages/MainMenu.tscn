@@ -83,3 +83,16 @@ text = "Play"
 [node name="QuitButton" type="Button" parent="CanvasLayer/Menu/MarginContainer/VBoxContainer"]
 layout_mode = 2
 text = "Quit"
+
+[node name="Spacer" type="Control" parent="CanvasLayer/Menu/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 15)
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/Menu/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 8
+bbcode_enabled = true
+text = "[center]How to play:[/center]
+You play as a viking raiding villages in England.
+You need to raid all villages and return to you ship without getting caught."
+fit_content = true
